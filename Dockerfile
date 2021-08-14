@@ -18,7 +18,7 @@ RUN bash -ex install.sh 2>&1 && \
 
 ENTRYPOINT [ "/s6-init" ]
 
-ADD s6/debian-root /
+COPY s6/debian-root /
 COPY s6/service /usr/local/bin/service
 
 # php config start passes special ENVs into
@@ -35,6 +35,7 @@ ENV IPv6 True
 EXPOSE 53 53/udp
 EXPOSE 67/udp
 EXPOSE 80
+EXPOSE 443
 
 ENV S6_LOGGING 0
 ENV S6_KEEP_ENV 1
