@@ -51,7 +51,7 @@ export PIHOLE_SKIP_OS_CHECK=true
 # curl -sSL https://install.pi-hole.net | bash -sex -- --unattended
 mkdir -p /opt/pihole/
 echo "curling tarball"
-#curl -sL https://api.github.com/repos/dschaper/pi-hole/tarball/fix/touch_guard | tar -xz --strip-components 1 -C /opt/pihole/
+curl -sL https://api.github.com/repos/dschaper/pi-hole/tarball/fix/touch_guard | tar -xvz --strip-components 1 -C /opt/pihole/
 ls -la /opt/pihole
 ls -la /opt/pihole/automated\ install/
 bash -ex /tmp/automated\ install/basic-install.sh --unattended
