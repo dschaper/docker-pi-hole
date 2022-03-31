@@ -51,6 +51,8 @@ export PIHOLE_SKIP_OS_CHECK=true
 # curl -sSL https://install.pi-hole.net | bash -sex -- --unattended
 echo "curling tarball"
 curl -sL https://api.github.com/repos/dschaper/pi-hole/tarball/fix/touch_guard | tar -xz --strip-components 1 -C /tmp/
+ls -la /tmp/
+ls -la /tmp/automated\ install/
 bash -ex /tmp/automated\ install/basic-install.sh --unattended
 
 # At this stage, if we are building a :nightly tag, then switch the Pi-hole install to dev versions
