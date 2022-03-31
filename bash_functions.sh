@@ -19,6 +19,9 @@ prepare_configs() {
     LIGHTTPD_USER="www-data"
     LIGHTTPD_GROUP="www-data"
     LIGHTTPD_CFG="lighttpd.conf.debian"
+
+    ###REMOVE THIS
+    install /dev/null /etc/lighttpd/external.conf
     installConfigs
    
     if [ ! -f "${setupVars}" ]; then
